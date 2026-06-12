@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meghawatt | KenGen Hydro Plaza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍽️ MEGHAWATT</div>
+            <ul class="nav-links">
+                <li><a href="#hot-beverages">☕ Beverages</a></li>
+                <li><a href="#cold-beverages">🧊 Cold</a></li>
+                <li><a href="#breakfast">🥐 Breakfast</a></li>
+                <li><a href="#vegetarian">🥗 Vegetarian</a></li>
+                <li><a href="#salads">🥙 Salads</a></li>
+                <li class="order-link"><a href="#">📋 My Order</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Background Section -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>Meghawatt</h1>
+            <div class="separator"></div>
+            <p>Exquisite Dining at Hydro Plaza</p>
+        </div>
+    </header>
+
+    <div id="cart-toast" class="cart-toast" role="status" aria-live="polite"></div>
+
+    <main class="container">
+        
+        <!-- Hot Beverages -->
+        <section id="hot-beverages" class="menu-category">
+            <h2 class="category-title">☕ Hot Beverages</h2>
+            <div class="menu-grid">
+                <div class="menu-card" onclick="addToCart('African Tea', 100)"><div class="details"><h3>African Tea</h3><p>Steeped to perfection</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Herbal Teas', 100)"><div class="details"><h3>Herbal Teas</h3><p>Assorted herbal blends</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Ginger Tea', 100)"><div class="details"><h3>Ginger Tea</h3><p>Fresh ginger infusion</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Masala Tea', 100)"><div class="details"><h3>Masala Tea</h3><p>Spiced Indian blend</p></div><span class="price">100</span></div>
+                <div class="menu-card highlighted" onclick="addToCart('Dawa', 150)"><div class="details"><h3>Dawa</h3><p>Honey, lemon & ginger</p></div><span class="price">150</span></div>
+                <div class="menu-card" onclick="addToCart('Hot Chocolate', 100)"><div class="details"><h3>Hot Chocolate</h3><p>Rich & creamy</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Hot Coffee', 100)"><div class="details"><h3>Hot Coffee</h3><p>Premium blend</p></div><span class="price">100</span></div>
+            </div>
+        </section>
+
+        <!-- Cold Beverages -->
+        <section id="cold-beverages" class="menu-category">
+            <h2 class="category-title">🧊 Cold Beverages</h2>
+            <div class="menu-grid">
+                <div class="menu-card" onclick="addToCart('Delmonte Pkt', 400)"><div class="details"><h3>Delmonte Pkt</h3><p>Tropical juice blend</p></div><span class="price">400</span></div>
+                <div class="menu-card" onclick="addToCart('Peek n Peel', 400)"><div class="details"><h3>Peek n Peel</h3><p>Citrus fresh flavor</p></div><span class="price">400</span></div>
+                <div class="menu-card" onclick="addToCart('Orchid', 400)"><div class="details"><h3>Orchid</h3><p>Exotic beverage</p></div><span class="price">400</span></div>
+                <div class="menu-card" onclick="addToCart('Soda (500ml)', 100)"><div class="details"><h3>Soda (500ml)</h3><p>Ice cold refreshment</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Cold Milk', 150)"><div class="details"><h3>Cold Milk</h3><p>Fresh dairy milk</p></div><span class="price">150</span></div>
+                <div class="menu-card" onclick="addToCart('Keringet Water', 100)"><div class="details"><h3>Keringet Water</h3><p>Pure mineral water</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Aquamist/Quencher', 70)"><div class="details"><h3>Aquamist/Quencher</h3><p>Hydrating spring water</p></div><span class="price">70</span></div>
+            </div>
+        </section>
+
+        <!-- Breakfast Snacks -->
+        <section id="breakfast" class="menu-category">
+            <h2 class="category-title">🥐 Breakfast Snacks</h2>
+            <div class="menu-grid">
+                <div class="menu-card" onclick="addToCart('Croissants', 100)"><div class="details"><h3>Croissants</h3><p>Buttery pastry</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Plain Toast', 40)"><div class="details"><h3>Plain Toast</h3><p>Freshly toasted bread</p></div><span class="price">40</span></div>
+                <div class="menu-card" onclick="addToCart('Assorted Cookies', 100)"><div class="details"><h3>Assorted Cookies</h3><p>Variety selection</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Large Muffin', 100)"><div class="details"><h3>Large Muffin</h3><p>Fresh baked</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('2kg Cake', 3000)"><div class="details"><h3>2kg Cake</h3><p>Vanilla, Marble & more</p></div><span class="price">3000</span></div>
+                <div class="menu-card" onclick="addToCart('Meat Pie', 150)"><div class="details"><h3>Meat Pie</h3><p>Savory pastry</p></div><span class="price">150</span></div>
+                <div class="menu-card" onclick="addToCart('Cake Block', 800)"><div class="details"><h3>Cake Block</h3><p>Layered perfection</p></div><span class="price">800</span></div>
+                <div class="menu-card" onclick="addToCart('Black Forest Cake', 1500)"><div class="details"><h3>Black Forest Cake</h3><p>Chocolate elegance</p></div><span class="price">1500</span></div>
+                <div class="menu-card" onclick="addToCart('Doughnuts', 50)"><div class="details"><h3>Doughnuts</h3><p>Sweet treats</p></div><span class="price">50</span></div>
+                <div class="menu-card" onclick="addToCart('Mandazi', 30)"><div class="details"><h3>Mandazi</h3><p>Golden fried pastry</p></div><span class="price">30</span></div>
+                <div class="menu-card" onclick="addToCart('American Pancake', 70)"><div class="details"><h3>American Pancake</h3><p>Fluffy & delicious</p></div><span class="price">70</span></div>
+                <div class="menu-card highlighted" onclick="addToCart('Megawatt Bread', 65)"><div class="details"><h3>⭐ Megawatt Bread</h3><p>Our signature loaf</p></div><span class="price">65</span></div>
+                <div class="menu-card" onclick="addToCart('Cinnamon Rolls', 100)"><div class="details"><h3>Cinnamon Rolls</h3><p>Sweet spiral rolls</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Beef Pies', 200)"><div class="details"><h3>Beef Pies</h3><p>Savory filling</p></div><span class="price">200</span></div>
+                <div class="menu-card" onclick="addToCart('Chicken Pie', 200)"><div class="details"><h3>Chicken Pie</h3><p>Tender poultry</p></div><span class="price">200</span></div>
+                <div class="menu-card" onclick="addToCart('Samosa (Beef)', 50)"><div class="details"><h3>Samosa (Beef)</h3><p>Crispy triangles</p></div><span class="price">50</span></div>
+                <div class="menu-card" onclick="addToCart('Veg Samosa', 50)"><div class="details"><h3>Veg Samosa</h3><p>Vegetarian delight</p></div><span class="price">50</span></div>
+                <div class="menu-card" onclick="addToCart('Baked Beans', 100)"><div class="details"><h3>Baked Beans</h3><p>Protein rich</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Tea Scones', 50)"><div class="details"><h3>Tea Scones</h3><p>Light & fluffy</p></div><span class="price">50</span></div>
+                <div class="menu-card" onclick="addToCart('Omelette', 100)"><div class="details"><h3>Omelette</h3><p>Spanish or plain</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Fried Egg', 100)"><div class="details"><h3>Fried Egg</h3><p>Made to order</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Boiled Egg', 30)"><div class="details"><h3>Boiled Egg</h3><p>Classic preparation</p></div><span class="price">30</span></div>
+                <div class="menu-card highlighted" onclick="addToCart('Nduma', 100)"><div class="details"><h3>⭐ Nduma</h3><p>Local specialty</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Sweet Potato', 100)"><div class="details"><h3>Sweet Potato</h3><p>Nutritious choice</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Sausage', 60)"><div class="details"><h3>Sausage</h3><p>Beef or chicken</p></div><span class="price">60</span></div>
+                <div class="menu-card" onclick="addToCart('Deep Fried Nduma', 100)"><div class="details"><h3>Deep Fried Nduma</h3><p>Crispy Kenyan treat</p></div><span class="price">100</span></div>
+                <div class="menu-card" onclick="addToCart('Bacon', 150)"><div class="details"><h3>Bacon</h3><p>Crispy strips</p></div><span class="price">150</span></div>
+            </div>
+        </section>
+
+        <!-- Vegetarian Section -->
+        <section id="vegetarian" class="menu-category">
+            <h2 class="category-title">🥗 Vegetarian Section</h2>
+            <div class="menu-grid">
+                <div class="menu-card" onclick="addToCart('Lentils', 250)"><div class="details"><h3>Lentils</h3><p>Protein powerhouse</p></div><span class="price">250</span></div>
+                <div class="menu-card" onclick="addToCart('Green Grams', 250)"><div class="details"><h3>Green Grams</h3><p>Nutritious legumes</p></div><span class="price">250</span></div>
+                <div class="menu-card" onclick="addToCart('Garden Peas', 300)"><div class="details"><h3>Garden Peas</h3><p>Aloo Mutter style</p></div><span class="price">300</span></div>
+                <div class="menu-card" onclick="addToCart('Vegetable Curry', 250)"><div class="details"><h3>Vegetable Curry</h3><p>Aromatic spices</p></div><span class="price">250</span></div>
+                <div class="menu-card" onclick="addToCart('Beans Coconut', 250)"><div class="details"><h3>Beans Coconut</h3><p>Rich sauce</p></div><span class="price">250</span></div>
+                <div class="menu-card" onclick="addToCart('Githeri', 200)"><div class="details"><h3>Githeri</h3><p>Corn & beans blend</p></div><span class="price">200</span></div>
+                <div class="menu-card" onclick="addToCart('Assorted Vegetable', 200)"><div class="details"><h3>Assorted Vegetable</h3><p>Fresh seasonal mix</p></div><span class="price">200</span></div>
+                <div class="menu-card" onclick="addToCart('Vegetable Pilau', 200)"><div class="details"><h3>Vegetable Pilau</h3><p>Fragrant rice</p></div><span class="price">200</span></div>
+                <div class="menu-card" onclick="addToCart('Plain Matoke', 200)"><div class="details"><h3>Plain Matoke</h3><p>Traditional staple</p></div><span class="price">200</span></div>
+                <div class="menu-card" onclick="addToCart('Ugali Vegetables', 150)"><div class="details"><h3>Ugali Vegetables</h3><p>Hearty combination</p></div><span class="price">150</span></div>
+                <div class="menu-card" onclick="addToCart('Chapati Vegetables', 150)"><div class="details"><h3>Chapati Vegetables</h3><p>Flatbread pairing</p></div><span class="price">150</span></div>
+                <div class="menu-card" onclick="addToCart('Rice Vegetables', 150)"><div class="details"><h3>Rice Vegetables</h3><p>Light & fresh</p></div><span class="price">150</span></div>
+                <div class="menu-card" onclick="addToCart('Ugali Scrambled', 200)"><div class="details"><h3>Ugali Scrambled</h3><p>With eggs</p></div><span class="price">200</span></div>
+                <div class="menu-card" onclick="addToCart('Mukimo', 200)"><div class="details"><h3>Mukimo</h3><p>Mashed potatoes</p></div><span class="price">200</span></div>
+            </div>
+        </section>
+
+        <!-- Salads -->
+        <section id="salads" class="menu-category">
+            <h2 class="category-title">🥙 Salads</h2>
+            <div class="menu-grid">
+                <div class="menu-card" onclick="addToCart('Kachumbari', 50)"><div class="details"><h3>Kachumbari</h3><p>Fresh tomato mix</p></div><span class="price">50</span></div>
+                <div class="menu-card" onclick="addToCart('Garden Salad', 200)"><div class="details"><h3>Garden Salad</h3><p>Mixed greens</p></div><span class="price">200</span></div>
+                <div class="menu-card" onclick="addToCart('Chef\'s Salad', 300)"><div class="details"><h3>Chef's Salad</h3><p>Premium selection</p></div><span class="price">300</span></div>
+                <div class="menu-card highlighted" onclick="addToCart('Classic Salad', 500)"><div class="details"><h3>Classic Salad</h3><p>Chicken, beef or fish</p></div><span class="price">500</span></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KenGen Hydro Plaza Restaurant System</p>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+
+        <div id="cart-items" class="cart-items-container">
+            <!-- Items will be injected here by JavaScript -->
+            <p class="empty-msg">Your tray is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cart-total">KES 0.00</span>
+            </div>
+            <button class="checkout-btn">Confirm Order</button>
+        </div>
+    </div>
+
+    <!-- Overlay to dim the background when cart is open -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h2>Confirm Your Order</h2>
+                <button id="close-checkout" class="close-btn">&times;</button>
+            </div>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="customer-name">Name *</label>
+                    <input type="text" id="customer-name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Phone Number *</label>
+                    <input type="tel" id="customer-phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="customer-location">Location/Office *</label>
+                    <input type="text" id="customer-location" name="location" required placeholder="e.g., 3rd Floor, East Wing">
+                </div>
+                <div class="form-group">
+                    <label for="customer-notes">Special Instructions (Optional)</label>
+                    <textarea id="customer-notes" name="notes" rows="3" placeholder="Any special requests?"></textarea>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items"></div>
+                    <div class="checkout-total">
+                        <span>Total:</span>
+                        <span id="checkout-total-amount">KES 0.00</span>
+                    </div>
+                </div>
+                <button type="submit" class="confirm-order-btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="item-modal" class="item-modal" role="dialog" aria-modal="true" aria-labelledby="item-modal-title">
+        <div class="item-modal-content">
+            <button id="close-item-modal" class="close-btn item-close-btn" aria-label="Close">&times;</button>
+            <img id="item-modal-image" class="item-modal-image" src="" alt="Food item preview">
+            <div class="item-modal-body">
+                <p id="item-modal-category" class="item-modal-category"></p>
+                <h3 id="item-modal-title"></h3>
+                <p id="item-modal-description" class="item-modal-description"></p>
+                <p id="item-modal-includes" class="item-modal-includes"></p>
+                <div class="item-modal-footer">
+                    <span id="item-modal-price" class="item-modal-price"></span>
+                    <span id="item-modal-status" class="item-modal-status available"></span>
+                </div>
+                <button id="add-item-to-cart" class="add-item-btn">Add to Order</button>
+            </div>
+        </div>
+    </div>
+    <div id="item-modal-overlay" class="item-modal-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
